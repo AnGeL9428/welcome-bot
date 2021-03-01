@@ -23,7 +23,7 @@ for (let index = 0; index < 1; index++) {
   
     let ses;
     client.on('voiceStateUpdate', async (prev, cur) => {
-        const yetkilirol = cur.guild.roles.cache.get("814928252367274065"); // ROLIN yerine yetkili rolünün id'sini yazın.
+        const yetkilirol = cur.guild.roles.cache.get(""); // Minimum Staff Role Id.
         if (cur.channel && (cur.channel.id === chnls[index])) {
             if ((cur.member.roles.highest.rawPosition < yetkilirol.rawPosition) && (cur.channel.members.size < 3)) {
                 ses = await concon.play('');
